@@ -1,0 +1,10 @@
+/* //这个是base-purple.css */
+:root{
+  --maincolor:#9966ff;
+}
+.colors{
+    width: 100px;
+    height: 100px;
+    background-color: var(--maincolor);
+    border: 1px solid var(--maincolor);
+}
