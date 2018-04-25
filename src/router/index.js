@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import HelloWorld from '@/components/HelloWorld'
 import Ztree from '@/components/ztree'
 import Ztrees from '@/components/ztrees'
+import Swipers from '@/components/swipers'
 Vue.use(Router)
 
 export default new Router({
@@ -21,6 +22,11 @@ export default new Router({
       path: '/ztrees',
       name: 'ztrees',
       component: Ztrees
+    },
+    {
+      path: '/swipers',
+      name: 'swipers',
+      component: Swipers
     }
   ]
 })

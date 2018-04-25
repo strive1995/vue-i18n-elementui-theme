@@ -2,6 +2,7 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
 import App from './App'
+import 'babel-polyfill'
 import router from './router'
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
@@ -10,7 +11,12 @@ import i18n from './i18n/i18n';
 import $ from 'jquery';
 import "../plugins/ztree/jquery.ztree.all.js"   
 import '../plugins/ztree/css/zTreeStyle/zTreeStyle.css';
-import "./assets/css/index.css";
+
+import VueAwesomeSwiper from 'vue-awesome-swiper'
+ 
+// require styles
+import 'swiper/dist/css/swiper.css'
+ 
 
 
 
@@ -24,7 +30,8 @@ import '@/assets/css/theme/fa4f52/index.css';
 import '@/assets/css/theme/ff0000/index.css';
 Vue.config.productionTip = false
 Vue.use(ElementUI)
-/* eslint-disable no-new */
+Vue.use(VueAwesomeSwiper, /* { default global options } */)
+
 new Vue({
   el: '#app',
   router,

@@ -49,12 +49,12 @@
         <el-radio label="ff0000">ff0000</el-radio>
       </el-radio-group>
     </div>
-    <div class="colors"></div>
   </div>
 </template>
 
 <script>
 import { toggleClass } from '@/utils/index'
+import Connect from './commons/connect.js';
 export default {
   name: "HelloWorld",
   data() {
@@ -361,14 +361,12 @@ export default {
         ]
       },
       value1: "",
-      value2: ""
+      value2: "",
+      pickNum:1
     };
   },
   mounted(){
     toggleClass(document.body,"custom-"+this.themecolor);
-
-    // console.log()
-    // $("#app").toggleClass("custom-"+this.themecolor)
   },
   methods: {
     handleChange(value) {
@@ -376,6 +374,8 @@ export default {
     },
     switchChinese() {
       this.$i18n.locale = "cn";
+
+      Connect.$emit('addCart', this.pickNum);
     },
     switchEnlish() {
       this.$i18n.locale = "en";
