@@ -1,4 +1,5 @@
 # vuetest
+# 主要使用css_wrap 添加了命名空间
 
 > A Vue.js project
 
